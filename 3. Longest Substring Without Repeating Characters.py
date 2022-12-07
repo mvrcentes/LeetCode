@@ -8,7 +8,7 @@ class Solution(object):
         max = 0
     
         for i in range(len(s)):
-            if s[i] != s[i + 1:] and s[i] not in temp:
+            if s[i] not in temp:
                 temp += s[i]
                 if len(temp) > max:
                     max = len(temp)
@@ -22,3 +22,4 @@ s = Solution()
 print(s.lengthOfLongestSubstring("abcabcbb"))
 print(s.lengthOfLongestSubstring("bbbbb"))
 print(s.lengthOfLongestSubstring("pwwkew"))
+print(s.lengthOfLongestSubstring("aa"))
